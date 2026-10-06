@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>How to Make a Burger</title>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #FFF3C7;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .intro {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 70px;
+      margin: 0;
+      animation: pop 0.8s ease-out;
+    }
+
+    .burger-page {
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+.ingredient {
+  position: absolute;
+  width: 320px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -300px;
+}
+
+.drop {
+  animation: dropDown 0.7s ease-out forwards;
+}
+#lettuce.drop {
+  animation: dropLettuce 0.7s ease-out forwards;
+}
+
+@keyframes dropLettuce {
+  from {
+    top: -300px;
+  }
+
+  to {
+    top: 60%;
+  }
+}
+@keyframes dropDown {
+  from {
+    top: -300px;
+  }
+
+  to {
+    top: 65%;
+  }
+}
+    @keyframes pop {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      70% {
+        transform: scale(1.15);
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    #patty.drop {
+  animation: dropPatty 0.7s ease-out forwards;
+}
+
+@keyframes dropPatty {
+  from {
+    top: -300px;
+  }
+
+  to {
+    top: 55%;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <section class="intro">
+    <h1>HOW TO MAKE A BURGER</h1>
+  </section>
+
+  <section class="burger-page">
+  <img src="222.png" class="ingredient" id="bottom-bun">
+  <img src="555.png" class="ingredient" id="lettuce">
+   <img src="333.png" class="ingredient" id="patty">
+</section>
+
+  <script>
+    const intro = document.querySelector(".intro");
+    const burgerPage = document.querySelector(".burger-page");
+
+    intro.addEventListener("click", function () {
+      intro.style.display = "none";
+      burgerPage.style.display = "block";
+    });
+    let step = 0;
+
+burgerPage.addEventListener("click", function () {
+
+  if (step === 0) {
+    document.getElementById("bottom-bun").classList.add("drop");
+  }
+
+  if (step === 1) {
+    document.getElementById("lettuce").classList.add("drop");
+  }
+  if (step === 2) {
+  document.getElementById("patty").classList.add("drop");
+}
+if (step === 2) {
+  document.getElementById("patty").classList.add("drop");
+}
+
+step++;
+});
+</script>
+  step++;
+});
+  </script>
+
+</body>
+</html>
