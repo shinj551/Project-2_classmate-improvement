@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f5f1e8;
+  color: #222;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #e8ded0;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 0;
+  font-weight: 500;
+}
+
+header p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+main {
+  width: 80%;
+  max-width: 900px;
+  margin: 60px auto;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+.ingredients {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.ingredients h2 {
+  margin-top: 0;
+}
+
+.ingredients li {
+  margin-bottom: 8px;
+}
+
+.step {
+  text-align: center;
+}
+
+.step h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.step img {
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 25px;
+}
+
+.step p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 15px;
+}
+
+a {
+  color: #222;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  main {
+    width: 90%;
+  }
+
+  .step img {
+    height: 280px;
+  }
+
+  .step h2 {
+    font-size: 26px;
+  }
+}
